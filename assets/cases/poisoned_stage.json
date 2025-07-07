@@ -1,0 +1,80 @@
+{
+  "case_id": "poisoned_stage",
+  "title": "The Poisoned Stage",
+  "description": "During a prestigious theater performance, the lead actor collapses mid-scene and later dies from poisoning. The poison was found in a water bottle on the dressing room table. Only a few individuals had access to the area and the refreshments before the show.",
+
+  "suspects": {
+    "A": {
+      "name": "The Understudy",
+      "description": "Stood to gain fame and the lead role.",
+      "image": "A.jpg"
+    },
+    "B": {
+      "name": "The Stage Manager",
+      "description": "Handled props and managed access to the dressing rooms.",
+      "image": "B.jpg"
+    },
+    "C": {
+      "name": "The Ex-Spouse",
+      "description": "Had a history of public arguments with the actor.",
+      "image": "C.jpg"
+    },
+    "D": {
+      "name": "The Rival Actor",
+      "description": "Had a long-standing feud over roles.",
+      "image": "D.jpg"
+    },
+    "E": {
+      "name": "The Catering Assistant",
+      "description": "Was responsible for drinks and food in the green room.",
+      "image": "E.jpg"
+    }
+  },
+
+  "evidence": [
+    {
+      "node": "AlibiA",
+      "label": "Alibi for The Understudy"
+    },
+    {
+      "node": "AlibiB",
+      "label": "Alibi for The Stage Manager"
+    },
+    {
+      "node": "AlibiC",
+      "label": "Alibi for The Ex-Spouse"
+    },
+    {
+      "node": "AlibiD",
+      "label": "Alibi for The Rival Actor"
+    },
+    {
+      "node": "AlibiE",
+      "label": "Alibi for The Catering Assistant"
+    },
+    {
+      "node": "Motive",
+      "label": "Strong Motive Present"
+    },
+    {
+      "node": "WitnessStatement",
+      "label": "Someone Was Seen Near Dressing Room"
+    },
+    {
+      "node": "FingerprintMatch",
+      "label": "Fingerprint on Bottle"
+    },
+    {
+      "node": "ForcedEntry",
+      "label": "Signs of Tampering in Room"
+    },
+    {
+      "node": "SecurityFootage",
+      "label": "Footage Shows Suspect Nearby"
+    },
+    {
+      "node": "WeaponUsed",
+      "label": "Method of Poison Delivery"
+    }
+  ]
+}

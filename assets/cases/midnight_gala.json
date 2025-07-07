@@ -1,0 +1,80 @@
+{
+  "case_id": "midnight_gala",
+  "title": "The Midnight Gala Heist",
+  "description": "During a lavish midnight gala at the city museum, a priceless diamond vanishes from a locked display case. The only people with access were VIP guests and staff. The security system was briefly disabled during a power flicker.",
+  
+  "suspects": {
+    "A": {
+      "name": "The Famous Actress",
+      "description": "Seen near the display just before the lights went out.",
+      "image": "A.jpg"
+    },
+    "B": {
+      "name": "The Tech Billionaire",
+      "description": "Known for hacking devices. Had access to security schematics.",
+      "image": "B.jpg"
+    },
+    "C": {
+      "name": "The Museum Curator",
+      "description": "Possesses master keys to the entire museum.",
+      "image": "C.jpg"
+    },
+    "D": {
+      "name": "The Retired Thief",
+      "description": "Claimed to be 'just a guest' but has a criminal past.",
+      "image": "D.jpg"
+    },
+    "E": {
+      "name": "The Security Guard",
+      "description": "Left his post for 5 minutes around the time of the theft.",
+      "image": "E.jpg"
+    }
+  },
+
+  "evidence": [
+    {
+      "node": "AlibiA",
+      "label": "Alibi for The Famous Actress"
+    },
+    {
+      "node": "AlibiB",
+      "label": "Alibi for The Tech Billionaire"
+    },
+    {
+      "node": "AlibiC",
+      "label": "Alibi for The Museum Curator"
+    },
+    {
+      "node": "AlibiD",
+      "label": "Alibi for The Retired Thief"
+    },
+    {
+      "node": "AlibiE",
+      "label": "Alibi for The Security Guard"
+    },
+    {
+      "node": "Motive",
+      "label": "Strong Motive Present"
+    },
+    {
+      "node": "WitnessStatement",
+      "label": "Witness Mentioned a Suspect"
+    },
+    {
+      "node": "FingerprintMatch",
+      "label": "Fingerprint Match Found"
+    },
+    {
+      "node": "ForcedEntry",
+      "label": "Signs of Forced Entry"
+    },
+    {
+      "node": "SecurityFootage",
+      "label": "Useful Security Footage Available"
+    },
+    {
+      "node": "WeaponUsed",
+      "label": "Tool/Method Used in Theft"
+    }
+  ]
+}
