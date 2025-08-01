@@ -1,4 +1,4 @@
-# main.py
+# main.py 
 # Streamlit app for the Mystery Solver
 
 import streamlit as st
@@ -6,6 +6,7 @@ import pandas as pd
 from pgmpy.inference import VariableElimination
 from supports.mystery_solver import build_bayesian_network, create_graphviz_plot
 from supports.scenario_loader import load_case, list_available_cases
+from supports.explainer import explain_top_suspect
 
 # Set up the page
 st.set_page_config(page_title="Mystery Solver", layout="wide")
@@ -72,6 +73,12 @@ if st.button("Solve Case"):
 
         chart_data = pd.DataFrame(df['Probability'].values, index=df['Suspect'].values, columns=['Probability'])
         st.bar_chart(chart_data)
+
+        # Explanation section
+        st.markdown("---")
+        st.subheader("🧠 Explanation")
+        explanation = explain_top_suspect(case_data, evidence_dict, result)
+        st.markdown(explanation)
 
     except Exception as e:
         st.error(f"Inference failed: {e}")
