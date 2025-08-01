@@ -22,22 +22,73 @@ This interactive web application helps solve fictional mystery cases using **Bay
 ```bash
 git clone https://github.com/your-username/mystery-solver.git
 cd mystery-solver
+```
 
 ### 2. Set Up Python Environment
 ```bash
 conda create -n mystery_solver python=3.10
 conda activate mystery_solver
 pip install -r requirements.txt
+```
 
 ### 3. Run the App
 ```bash
 streamlit run main.py
+```
+
+## 🗂️ Project Structure
+```bash
+mystery_solver/
+├── main.py                    # Streamlit UI logic
+├── supports/
+│   ├── mystery_solver.py      # Bayesian model & CPDs
+│   ├── scenario_loader.py     # Loads .json mystery cases
+│   └── explainer.py           # Generates human-readable verdicts
+├── assets/
+│   ├── suspects/              # Profile images (A.jpg, B.jpg, ...)
+│   └── cases/                 # Case files (midnight_gala.json, ...)
+├── requirements.txt
+└── README.md
+```
+
+## 📂 Adding New Cases
+- Create a new JSON file under `assets/cases/`
+- Structure it like this:
+```bash
+{
+  "case_id": "case_id",
+  "title": "Case Title",
+  "description": "Short scenario description.",
+  "suspects": {
+    "A": {
+      "name": "Suspect A",
+      "description": "Bio about suspect A.",
+      "image": "A.jpg"
+    }
+    ...
+  },
+  "evidence": [
+    { "node": "AlibiA", "label": "Alibi for Suspect A" },
+    ...
+  ]
+}
+```
+- Add corresponding images (e.g., A.jpg) into `assets/suspects/`
 
 
+## 📖 Technologies Used
+- `pgmpy`: Probabilistic Graphical Models (Bayesian Networks)
 
+- `streamlit`: Fast, reactive user interface for Python
 
+- `pandas`, `numpy`: Data handling
 
+- `graphviz`: Visualizing the model structure
 
+)
 
+## 🛡️ License
+This project is licensed under the MIT License — free to use and modify.
 
-
+## 🙌 Credits
+Created by a group of NSU from course `CSE 440 Artificial Intelligence`
