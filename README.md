@@ -20,7 +20,7 @@ This interactive web application helps solve fictional mystery cases using **Bay
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/mystery-solver.git
+git clone https://github.com/NaimaRoshni/Mystery_Solver.git
 cd mystery-solver
 ```
 
@@ -28,6 +28,8 @@ cd mystery-solver
 ```bash
 conda create -n mystery_solver python=3.10
 conda activate mystery_solver
+conda init
+conda install -c conda-forge graphviz
 pip install -r requirements.txt
 ```
 
@@ -47,6 +49,7 @@ mystery_solver/
 ├── assets/
 │   ├── suspects/              # Profile images (A.jpg, B.jpg, ...)
 │   └── cases/                 # Case files (midnight_gala.json, ...)
+│   └── screenshots/           # Screenshots of interface
 ├── requirements.txt
 └── README.md
 ```
@@ -136,3 +139,7 @@ This project is licensed under the MIT License — free to use and modify.
 
 ## 🙌 Credits
 Created by a group of NSU from course `CSE 440 Artificial Intelligence`
+Our Team Members:
+- [Naima Zaman Roshni](https://github.com/NaimaRoshni)
+
+
