@@ -7,6 +7,8 @@ from pgmpy.inference import VariableElimination
 from supports.mystery_solver import build_bayesian_network, create_graphviz_plot
 from supports.scenario_loader import load_case, list_available_cases
 from supports.explainer import explain_top_suspect
+import os
+import io
 
 # Set up the page
 st.set_page_config(page_title="Mystery Solver", layout="wide")
@@ -79,6 +81,41 @@ if st.button("Solve Case"):
         st.subheader("🧠 Explanation")
         explanation = explain_top_suspect(case_data, evidence_dict, result)
         st.markdown(explanation)
+
+        # Top suspect profile card with image
+        top_suspect = df.iloc[0]['Suspect']
+        suspect_data = case_data['suspects'].get(top_suspect, {})
+        image_path = f"assets/suspects/{suspect_data.get('image', '')}"
+
+        st.markdown("---")
+        st.subheader("👤 Suspect Profile")
+        cols = st.columns([1, 3])
+        with cols[0]:
+            if os.path.exists(image_path):
+                st.image(image_path, width=100)
+        with cols[1]:
+            st.markdown(f"**Name:** {suspect_data.get('name', 'Unknown')}")
+            st.markdown(f"**Bio:** {suspect_data.get('description', 'No description available.')}")
+
+        # Export report
+        st.markdown("---")
+        st.subheader("📝 Download Case Report")
+        report = io.StringIO()
+        report.write(f"Mystery Case: {case_data['title']}\n")
+        report.write(f"Description: {case_data['description']}\n\n")
+        report.write("--- Evidence ---\n")
+        for k, v in evidence_dict.items():
+            report.write(f"{k}: {v}\n")
+        report.write("\n--- Inference ---\n")
+        for _, row in df.iterrows():
+            report.write(f"{row['Suspect']}: {row['% Probability']}\n")
+        report.write("\n--- Explanation ---\n")
+        report.write(explanation + "\n")
+        report.write("\n--- Top Suspect ---\n")
+        report.write(f"Name: {suspect_data.get('name')}\n")
+        report.write(f"Bio: {suspect_data.get('description')}\n")
+
+        st.download_button("📄 Download Report as TXT", report.getvalue(), file_name="case_report.txt")
 
     except Exception as e:
         st.error(f"Inference failed: {e}")
