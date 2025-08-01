@@ -22,3 +22,22 @@ This interactive web application helps solve fictional mystery cases using **Bay
 ```bash
 git clone https://github.com/your-username/mystery-solver.git
 cd mystery-solver
+
+### 2. Set Up Python Environment
+```bash
+conda create -n mystery_solver python=3.10
+conda activate mystery_solver
+pip install -r requirements.txt
+
+### 3. Run the App
+```bash
+streamlit run main.py
+
+
+
+
+
+
+
+
+
