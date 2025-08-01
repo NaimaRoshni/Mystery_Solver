@@ -85,7 +85,51 @@ mystery_solver/
 
 - `graphviz`: Visualizing the model structure
 
-)
+## 📄 Example Use Case
+
+### 🕵️ The Midnight Gala Heist
+
+A priceless diamond vanishes during a grand gala at the city museum. You input clues like:
+
+- **AlibiD** = `No`
+- **FingerprintMatch** = `D`
+- **Motive** = `Yes`
+
+The system replies:
+
+> 🧠 **The Retired Thief** is the most likely suspect with a probability of **77%**.
+
+It also generates a full downloadable report summarizing:
+- Your entered evidence
+- Inference results (posterior probabilities)
+- Natural-language explanation
+- Suspect profile (name, bio, image)
+
+## 📸 Screenshots
+
+Below are some visuals from the Mystery Solver app to showcase its features:
+
+### 🖼️ User Interface
+Clean and organized layout using Streamlit.
+![App Interface](assets/screenshots/interface.png)
+
+### 🧩 Case Selection
+Easily switch between multiple mystery cases.
+![Case Selection](assets/screenshots/cases.png)
+
+### 🧠 Explanation + Profile
+Displays reasoning and top suspect's profile.
+![Explanation and Suspect Profile](assets/screenshots/explanation.png)
+
+### 📊 Inference Results
+Visual breakdown of posterior probabilities.
+![Inference Results](assets/screenshots/inference_results.png)
+
+### 🧾 Input Clues
+Dynamically enter clues through intuitive widgets.
+![Clue Inputs](assets/screenshots/input_clues.png)
+
+
 
 ## 🛡️ License
 This project is licensed under the MIT License — free to use and modify.
