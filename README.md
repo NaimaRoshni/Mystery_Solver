@@ -120,10 +120,6 @@ Clean and organized layout using Streamlit.
 Easily switch between multiple mystery cases.
 ![Case Selection](assets/screenshots/cases.png)
 
-### 🧠 Explanation + Profile
-Displays reasoning and top suspect's profile.
-![Explanation and Suspect Profile](assets/screenshots/explanation.png)
-
 ### 📊 Inference Results
 Visual breakdown of posterior probabilities.
 ![Inference Results](assets/screenshots/inference_results.png)
@@ -132,7 +128,9 @@ Visual breakdown of posterior probabilities.
 Dynamically enter clues through intuitive widgets.
 ![Clue Inputs](assets/screenshots/input_clues.png)
 
-
+### 🧠 Explanation + Profile
+Displays reasoning and top suspect's profile.
+![Explanation and Suspect Profile](assets/screenshots/explanation.png)
 
 ## 🛡️ License
 This project is licensed under the MIT License — free to use and modify.
