@@ -76,6 +76,7 @@ mystery_solver/
   ]
 }
 ```
+
 - Add corresponding images (e.g., A.jpg) into `assets/suspects/`
 
 
