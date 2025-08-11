@@ -21,7 +21,7 @@ This interactive web application helps solve fictional mystery cases using **Bay
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/NaimaRoshni/Mystery_Solver.git
-cd mystery-solver
+cd Mystery_Solver
 ```
 
 ### 2. Set Up Python Environment
